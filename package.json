@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "",
+    "lint": "prettier --write .",
     "test": ""
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/justworkshr/milo-tokens/issues"
   },
-  "homepage": "https://github.com/justworkshr/milo-tokens#readme"
+  "homepage": "https://github.com/justworkshr/milo-tokens#readme",
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
 }
