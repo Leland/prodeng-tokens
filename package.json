@@ -1,0 +1,20 @@
+{
+  "name": "milo-tokens",
+  "version": "0.0.1",
+  "description": "The 'design tokens' used by the Justworks design system Milo",
+  "main": "index.js",
+  "scripts": {
+    "build": "",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justworkshr/milo-tokens.git"
+  },
+  "author": "Justworks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justworkshr/milo-tokens/issues"
+  },
+  "homepage": "https://github.com/justworkshr/milo-tokens#readme"
+}
