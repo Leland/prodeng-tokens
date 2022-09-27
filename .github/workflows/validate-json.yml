@@ -1,0 +1,23 @@
+name: Validate JSON
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Code"
+        uses: actions/checkout@v3
+      - name: "Setup Node 16.13"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13
+          cache: "npm"
+      - name: "Install Dependencies"
+        run: npm ci
+      - name: "Run NPM Test"
+        run: npm test

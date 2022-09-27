@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "Milo 3.0": { "type": "object" },
+    "$themes": { "type": "array" },
+    "$metadata": { "type": "object" }
+  },
+  "required": ["$themes", "$metadata"]
+}

@@ -7,7 +7,7 @@
     "build": "style-dictionary build",
     "clean": "rm -rf build/*",
     "lint": "prettier --write .",
-    "test": ""
+    "test": "ajv test -s test/schema.json -d tokens/*.json --valid --errors=text --all-errors"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/justworkshr/milo-tokens#readme",
   "devDependencies": {
+    "ajv": "^8.11.0",
+    "ajv-cli": "^5.0.0",
     "prettier": "2.7.1",
     "style-dictionary": "^3.7.1"
   }
