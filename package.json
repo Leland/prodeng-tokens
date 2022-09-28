@@ -4,7 +4,7 @@
   "description": "The 'design tokens' used by the Justworks design system Milo",
   "main": "index.js",
   "scripts": {
-    "build": "style-dictionary build",
+    "build": "token-transformer tokens/tokens.json tokens/tmp/token.json --expandTypography=true  --resolveReferences=false --expandComposition=false && style-dictionary build",
     "clean": "rm -rf build/*",
     "lint": "prettier --write .",
     "test": "ajv test -s test/schema.json -d tokens/*.json --valid --errors=text --all-errors"
@@ -23,6 +23,7 @@
     "ajv": "^8.11.0",
     "ajv-cli": "^5.0.0",
     "prettier": "2.7.1",
-    "style-dictionary": "^3.7.1"
+    "style-dictionary": "^3.7.1",
+    "token-transformer": "0.0.27"
   }
 }
