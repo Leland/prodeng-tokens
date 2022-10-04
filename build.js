@@ -19,6 +19,25 @@ StyleDictionary.registerTransform({
 });
 
 StyleDictionary.registerTransform({
+  name: "typography/percent-line-heights-to-unitless",
+  type: "value",
+  matcher(prop) {
+    const transformable =
+      prop.attributes.type === "type" && prop.attributes.item === "line-height";
+
+    return (
+      transformable &&
+      typeof prop.original.value === "string" &&
+      prop.original.value.endsWith("%")
+    );
+  },
+  transformer(prop) {
+    const unitlessVal = (prop.original.value.slice(0, -1)) / 100;
+    return unitlessVal.toFixed(2);
+  },
+});
+
+StyleDictionary.registerTransform({
   name: "typography/weight-strings-to-vals",
   type: "value",
   matcher(prop) {
@@ -46,6 +65,7 @@ StyleDictionary.registerTransformGroup({
   transforms: StyleDictionary.transformGroup["css"].concat([
     "typography/px-to-rem",
     "typography/weight-strings-to-vals",
+    "typography/percent-line-heights-to-unitless"
   ]),
 });
 
