@@ -18,10 +18,34 @@ StyleDictionary.registerTransform({
   },
 });
 
+StyleDictionary.registerTransform({
+  name: "typography/weight-strings-to-vals",
+  type: "value",
+  matcher(prop) {
+    const transformable =
+      prop.attributes.type === "type" && prop.attributes.item === "font-weight";
+
+    return transformable && isNaN(prop.original.value);
+  },
+  transformer(prop) {
+    switch (prop.original.value) {
+      case "Regular":
+        return 400;
+      case "Bold":
+        return 700;
+      case "Bold Display":
+        return 800;
+      default:
+        return prop.original.value;
+    }
+  },
+});
+
 StyleDictionary.registerTransformGroup({
   name: "custom/css",
   transforms: StyleDictionary.transformGroup["css"].concat([
     "typography/px-to-rem",
+    "typography/weight-strings-to-vals",
   ]),
 });
 

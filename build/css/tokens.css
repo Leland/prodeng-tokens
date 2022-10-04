@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 04 Oct 2022 13:16:08 GMT
+ * Generated on Tue, 04 Oct 2022 13:24:18 GMT
  */
 
 :root {
@@ -23,9 +23,9 @@
   --private-type-font-size-lg: 1.25rem;
   --private-type-font-size-xl: 1.5rem;
   --private-type-font-size-xxl: 2rem;
-  --private-type-font-weight-regular: Regular;
-  --private-type-font-weight-bold: Bold;
-  --private-type-font-weight-heavy: Bold Display;
+  --private-type-font-weight-regular: 400;
+  --private-type-font-weight-bold: 700;
+  --private-type-font-weight-heavy: 800;
   --private-type-line-height-xs: 1rem;
   --private-type-line-height-sm: 1.25rem;
   --private-type-line-height-md: 1.5rem;
@@ -119,7 +119,7 @@
   --component-button-disabled-border-color: var(--private-color-gray-200);
   --component-button-disabled-background-color: var(--private-color-gray-200);
   --component-button-font-family-default: var(--private-type-font-family-default);
-  --component-button-font-weight: var(--private-type-font-weight-heavy);
+  --component-button-font-weight: 800;
   --component-button-line-height: var(--private-type-line-height-md);
   --component-button-font-size: var(--private-type-font-size-md);
   --component-button-grid-gap: var(--private-spacing-2xs);
