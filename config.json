@@ -2,7 +2,7 @@
   "source": ["tokens/tmp/*.json"],
   "platforms": {
     "css": {
-      "transformGroup": "css",
+      "transformGroup": "custom/css",
       "buildPath": "build/css/",
       "files": [
         {

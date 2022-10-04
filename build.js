@@ -1,0 +1,28 @@
+const StyleDictionary = require("style-dictionary").extend("config.json");
+
+StyleDictionary.registerTransform({
+  name: "typography/px-to-rem",
+  type: "value",
+  matcher(prop) {
+    const transformable =
+      prop.attributes.type === "type" &&
+      (prop.attributes.item === "line-height" ||
+        prop.attributes.item === "font-size");
+    // Figma's pixel values are unitless
+    return transformable && !isNaN(prop.original.value);
+  },
+  transformer(prop) {
+    const BASE_FONT_PIXEL_SIZE = 16;
+    const remValue = prop.original.value.toFixed(3) / BASE_FONT_PIXEL_SIZE;
+    return `${remValue.toString()}rem`;
+  },
+});
+
+StyleDictionary.registerTransformGroup({
+  name: "custom/css",
+  transforms: StyleDictionary.transformGroup["css"].concat([
+    "typography/px-to-rem",
+  ]),
+});
+
+StyleDictionary.buildAllPlatforms();
