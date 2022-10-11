@@ -1,13 +1,18 @@
 {
-  "source": ["tokens/**/*.json"],
+  "source": ["tokens/tmp/*.json"],
   "platforms": {
     "css": {
-      "transformGroup": "css",
+      "transformGroup": "custom/css",
       "buildPath": "build/css/",
-      "files": [{
-        "destination": "tokens.css",
-        "format": "css/variables"
-      }]
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables",
+          "options": {
+            "outputReferences": true
+          }
+        }
+      ]
     }
   }
 }
