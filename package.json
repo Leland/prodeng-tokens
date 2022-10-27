@@ -1,6 +1,6 @@
 {
   "name": "milo-tokens",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "The 'design tokens' used by the Justworks design system Milo",
   "main": "index.js",
   "scripts": {
