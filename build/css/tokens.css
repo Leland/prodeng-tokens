@@ -1,10 +1,10 @@
 /**
  * Do not edit directly
- * Generated on Fri, 18 Nov 2022 18:57:45 GMT
+ * Generated on Fri, 18 Nov 2022 20:19:35 GMT
  */
 
 :root {
-  --base-color-blue-400: #52b0ff;
+  --base-color-blue-400: #126ee3;
   --token-set-order-0: global;
   --intent-color-brand: var(--base-color-blue-400);
   --component-button-color-bg-resting: var(--intent-color-brand);
